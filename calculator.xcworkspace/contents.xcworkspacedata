@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/Apple/Desktop/Ankit/MyActualProjects/Sports/SportsApp/calculator.xcodeproj">
+      location = "group:calculator.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

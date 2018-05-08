@@ -8,37 +8,17 @@
 
 import UIKit
 import SideMenu
-class CustomView: UIViewController,UISideMenuNavigationControllerDelegate {
-    var albumName = NSMutableArray()
-   // var albumImage: [UIImage] = [#imageLiteral(resourceName: "defaultImage")]
-    @IBOutlet weak var myTrial : UIButton!
-    @IBOutlet weak var myTableView: UITableView!
-    @IBOutlet weak var popUpTitle: UITextField!
-    
-    @IBAction func myTrialPressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "TrialViewController") as! TrialViewController
-        self.present(vc, animated: true, completion: nil)
-    }
-    @IBAction func donePress(_ sender: Any) {
-        albumName.add(popUpTitle.text as Any)
-        popUpTitle.text = ""
-        myTableView.reloadData()
-        popUpView.removeFromSuperview()
-    }
-  
-   
-   
-    
-    @IBOutlet var popUpView: UIVisualEffectView!
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MenuSeague"
-        {
-            // self.present(UISideMenuNavigationController(rootViewController:CustomView()), animated: true, completion: nil)
-        }
+class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITableViewDelegate,UITableViewDataSource {
+    var myhomeCategory = ["Wallpapers","Videos","Quotes","Awards"]
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myhomeCategory.count
     }
     
-    var menuVisible = false
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeTableViewCell
+        return cell
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -52,6 +32,6 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate {
     }
     
     
-    
+
     
 }

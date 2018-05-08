@@ -18,17 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let launchBefore =  UserDefaults.standard.bool(forKey: "launchedBefore")
-        if launchBefore {
-            launchMessage = "Has been launched before"
-        }
-        else{
-            
-            launchMessage = "First time launch"
-            firstTimeLaunch = true
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
-        }
-        print("\(launchMessage)")
+        var navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.barStyle = .black
+        navigationBarAppearance.tintColor = UIColor.black
+        navigationBarAppearance.backgroundColor = UIColor.red
         return true
     }
 

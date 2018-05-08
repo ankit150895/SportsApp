@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -99,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="841.52923538230891"/>
         </scene>
-        <!--SecretVault-->
+        <!--Custom View-->
         <scene sceneID="i94-En-SV4">
             <objects>
                 <viewController storyboardIdentifier="CustomView" id="H6M-dp-KYq" customClass="CustomView" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,93 +106,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdb-jB-BET">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ViratKholiBanner" translatesAutoresizingMaskIntoConstraints="NO" id="Psc-7N-ekN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PS5-Jk-mtJ">
+                                <rect key="frame" x="0.0" y="264" width="375" height="403"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="258" id="kMT-dF-0Sb" customClass="HomeTableViewCell" customModule="calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="258"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kMT-dF-0Sb" id="LPG-7c-vVH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="257.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-Ih-SFR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGx-cE-QIE">
+                                                    <rect key="frame" x="-0.5" y="193" width="375" height="64.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pGx-cE-QIE" firstAttribute="width" secondItem="Kjg-Ih-SFR" secondAttribute="width" id="3c1-VF-V9Z"/>
+                                                <constraint firstItem="Kjg-Ih-SFR" firstAttribute="leading" secondItem="LPG-7c-vVH" secondAttribute="leading" id="93u-I3-ecO"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kjg-Ih-SFR" secondAttribute="trailing" id="FXj-2A-xdp"/>
+                                                <constraint firstItem="pGx-cE-QIE" firstAttribute="centerX" secondItem="Kjg-Ih-SFR" secondAttribute="centerX" id="TQT-bP-043"/>
+                                                <constraint firstItem="Kjg-Ih-SFR" firstAttribute="centerX" secondItem="LPG-7c-vVH" secondAttribute="centerX" id="h1w-ok-6Ua"/>
+                                                <constraint firstItem="Kjg-Ih-SFR" firstAttribute="height" secondItem="LPG-7c-vVH" secondAttribute="height" multiplier="0.75" id="svq-mF-PbL"/>
+                                                <constraint firstItem="pGx-cE-QIE" firstAttribute="height" secondItem="LPG-7c-vVH" secondAttribute="height" multiplier="0.25" id="vhB-Cq-eYu"/>
+                                                <constraint firstItem="Kjg-Ih-SFR" firstAttribute="top" secondItem="LPG-7c-vVH" secondAttribute="top" id="wk5-dz-ihv"/>
+                                                <constraint firstItem="pGx-cE-QIE" firstAttribute="top" secondItem="Kjg-Ih-SFR" secondAttribute="bottom" id="xfJ-Zn-pSY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="homeCellLabel" destination="pGx-cE-QIE" id="Zs6-66-A21"/>
+                                            <outlet property="homeCellimgView" destination="Kjg-Ih-SFR" id="cjY-zf-5Ca"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="myTrialPressed:" destination="H6M-dp-KYq" eventType="touchUpInside" id="ZDm-bV-aRA"/>
+                                    <outlet property="dataSource" destination="H6M-dp-KYq" id="pmo-x2-bOK"/>
+                                    <outlet property="delegate" destination="H6M-dp-KYq" id="da2-ZY-q1s"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sdb-jB-BET" firstAttribute="top" secondItem="O0M-wG-Cy8" secondAttribute="top" id="S0I-Sj-1yA"/>
-                            <constraint firstItem="O0M-wG-Cy8" firstAttribute="trailing" secondItem="sdb-jB-BET" secondAttribute="trailing" id="XI9-ij-3dH"/>
-                            <constraint firstItem="O0M-wG-Cy8" firstAttribute="bottom" secondItem="sdb-jB-BET" secondAttribute="bottom" id="gqe-iA-v3z"/>
-                            <constraint firstItem="sdb-jB-BET" firstAttribute="leading" secondItem="O0M-wG-Cy8" secondAttribute="leading" id="mzX-Jb-xuo"/>
+                            <constraint firstItem="PS5-Jk-mtJ" firstAttribute="leading" secondItem="O0M-wG-Cy8" secondAttribute="leading" id="0hn-ji-rc7"/>
+                            <constraint firstItem="O0M-wG-Cy8" firstAttribute="trailing" secondItem="PS5-Jk-mtJ" secondAttribute="trailing" id="N0l-rw-44x"/>
+                            <constraint firstItem="PS5-Jk-mtJ" firstAttribute="top" secondItem="Psc-7N-ekN" secondAttribute="bottom" id="Roe-hh-ihg"/>
+                            <constraint firstItem="O0M-wG-Cy8" firstAttribute="trailing" secondItem="Psc-7N-ekN" secondAttribute="trailing" id="ZMF-9T-mLB"/>
+                            <constraint firstItem="Psc-7N-ekN" firstAttribute="top" secondItem="O0M-wG-Cy8" secondAttribute="top" id="c7R-cw-A07"/>
+                            <constraint firstItem="O0M-wG-Cy8" firstAttribute="bottom" secondItem="PS5-Jk-mtJ" secondAttribute="bottom" id="fVv-bc-95a"/>
+                            <constraint firstItem="Psc-7N-ekN" firstAttribute="leading" secondItem="O0M-wG-Cy8" secondAttribute="leading" id="nfH-6h-5HD"/>
+                            <constraint firstItem="Psc-7N-ekN" firstAttribute="height" secondItem="17C-w2-d5t" secondAttribute="height" multiplier="0.3" id="pKh-Te-U81"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O0M-wG-Cy8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SecretVault" largeTitleDisplayMode="always" id="yq6-DW-k7a">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="yq6-DW-k7a">
                         <barButtonItem key="backBarButtonItem" title=" " id="2Ge-Ip-xfh"/>
                         <barButtonItem key="leftBarButtonItem" image="more.png" id="D7I-pz-Vsv">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="LRq-Yn-ITk" kind="presentation" identifier="MenuSeague" id="QFo-pt-inv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="myTrial" destination="sdb-jB-BET" id="iQH-ac-wtW"/>
-                        <outlet property="popUpTitle" destination="QQT-Q9-nPj" id="7FY-ZQ-Cfs"/>
-                        <outlet property="popUpView" destination="d65-Jt-suJ" id="Pqd-hN-uST"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzH-QA-zlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <visualEffectView opaque="NO" contentMode="scaleToFill" id="d65-Jt-suJ">
-                    <rect key="frame" x="0.0" y="0.0" width="292" height="206"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KwP-SI-PBg">
-                        <rect key="frame" x="0.0" y="0.0" width="292" height="206"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQT-Q9-nPj">
-                                <rect key="frame" x="14.5" y="25" width="263" height="41"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-ko-HAh">
-                                <rect key="frame" x="73" y="91" width="146" height="41"/>
-                                <color key="backgroundColor" name="color3"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="donePress:" destination="H6M-dp-KYq" eventType="touchUpInside" id="osZ-4o-o8l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIX-RO-Cy8">
-                                <rect key="frame" x="73" y="142" width="146" height="41"/>
-                                <color key="backgroundColor" name="color3"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelPress:" destination="H6M-dp-KYq" eventType="touchUpInside" id="bvN-Fa-e7I"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="color4"/>
-                        <constraints>
-                            <constraint firstItem="PZT-ko-HAh" firstAttribute="centerX" secondItem="KwP-SI-PBg" secondAttribute="centerX" id="84J-wN-XzP"/>
-                            <constraint firstItem="QQT-Q9-nPj" firstAttribute="top" secondItem="KwP-SI-PBg" secondAttribute="top" constant="25" id="89d-yn-40v"/>
-                            <constraint firstItem="QQT-Q9-nPj" firstAttribute="width" secondItem="KwP-SI-PBg" secondAttribute="width" multiplier="0.9" id="D66-ei-wCn"/>
-                            <constraint firstItem="QQT-Q9-nPj" firstAttribute="height" secondItem="KwP-SI-PBg" secondAttribute="height" multiplier="0.2" id="HYx-Zw-FNT"/>
-                            <constraint firstItem="NIX-RO-Cy8" firstAttribute="centerX" secondItem="KwP-SI-PBg" secondAttribute="centerX" id="YYk-14-ibq"/>
-                            <constraint firstItem="QQT-Q9-nPj" firstAttribute="centerX" secondItem="KwP-SI-PBg" secondAttribute="centerX" id="cOa-zU-hzv"/>
-                            <constraint firstItem="NIX-RO-Cy8" firstAttribute="height" secondItem="PZT-ko-HAh" secondAttribute="height" id="g7E-lt-zbf"/>
-                            <constraint firstItem="NIX-RO-Cy8" firstAttribute="width" secondItem="PZT-ko-HAh" secondAttribute="width" id="hJw-yu-gPC"/>
-                            <constraint firstItem="PZT-ko-HAh" firstAttribute="width" secondItem="KwP-SI-PBg" secondAttribute="width" multiplier="0.5" id="sep-w8-LhF"/>
-                            <constraint firstItem="PZT-ko-HAh" firstAttribute="height" secondItem="QQT-Q9-nPj" secondAttribute="height" id="uUT-Ox-Fn2"/>
-                            <constraint firstItem="PZT-ko-HAh" firstAttribute="top" secondItem="QQT-Q9-nPj" secondAttribute="bottom" constant="25" id="xHZ-j2-oQR"/>
-                            <constraint firstItem="NIX-RO-Cy8" firstAttribute="top" secondItem="PZT-ko-HAh" secondAttribute="bottom" constant="10" id="xPi-m1-eeC"/>
-                        </constraints>
-                    </view>
-                    <blurEffect style="light"/>
-                </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="233" y="88"/>
+            <point key="canvasLocation" x="232.80000000000001" y="87.706146926536732"/>
         </scene>
         <!--Trial View Controller-->
         <scene sceneID="UAG-kL-PBB">
@@ -273,13 +259,8 @@
     <resources>
         <image name="HeaderDarkBG" width="2500" height="1668"/>
         <image name="KohliSideMenuBanner" width="660" height="440"/>
+        <image name="ViratKholiBanner" width="800" height="448"/>
         <image name="more.png" width="50" height="50"/>
-        <namedColor name="color3">
-            <color red="0.40799999240000001" green="0.40799999240000001" blue="0.40799999240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="color4">
-            <color red="0.72200000286102295" green="0.72200000286102295" blue="0.72100001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QFo-pt-inv"/>
