@@ -176,7 +176,7 @@
                         <barButtonItem key="leftBarButtonItem" image="more.png" id="D7I-pz-Vsv">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="LRq-Yn-ITk" kind="presentation" identifier="MenuSeague" id="QFo-pt-inv"/>
+                                <segue destination="LRq-Yn-ITk" kind="show" identifier="MenuSeague" id="QFo-pt-inv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
