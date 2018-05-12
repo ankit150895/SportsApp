@@ -6,6 +6,7 @@ target 'calculator' do
   use_frameworks!
   pod 'SideMenu'
 	pod 'Alamofire'
+	pod 'Kingfisher'
   # Pods for calculator
 
 end

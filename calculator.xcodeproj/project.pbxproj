@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973040020A1B23C006B8850 /* HomeTableViewCell.swift */; };
+		09DBB3CF20A58C090013073A /* ApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB3CE20A58C090013073A /* ApiData.swift */; };
 		09FBA815207DDB860067C6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBA814207DDB860067C6C9 /* AppDelegate.swift */; };
 		09FBA81A207DDB860067C6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FBA818207DDB860067C6C9 /* Main.storyboard */; };
 		09FBA81D207DDB860067C6C9 /* calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09FBA81B207DDB860067C6C9 /* calculator.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0973040020A1B23C006B8850 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		09DBB3CE20A58C090013073A /* ApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiData.swift; sourceTree = "<group>"; };
 		09FBA811207DDB860067C6C9 /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FBA814207DDB860067C6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09FBA819207DDB860067C6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				18446414207F4397005755DA /* CustomView.swift */,
+				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
 				09FBA818207DDB860067C6C9 /* Main.storyboard */,
 				0973040020A1B23C006B8850 /* HomeTableViewCell.swift */,
@@ -219,11 +222,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-calculator/Pods-calculator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +245,7 @@
 			files = (
 				18664D6820872B8600C2E313 /* MenuViewController.swift in Sources */,
 				18822DEF209EFAE000BBB1B7 /* TrialViewController.swift in Sources */,
+				09DBB3CF20A58C090013073A /* ApiData.swift in Sources */,
 				0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */,
 				18664D6A20872BA500C2E313 /* MenuTableViewCell.swift in Sources */,
 				18446415207F4397005755DA /* CustomView.swift in Sources */,

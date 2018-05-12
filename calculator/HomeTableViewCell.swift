@@ -19,8 +19,8 @@ class HomeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        homeCellLabel.backgroundColor = selected ? #colorLiteral(red: 0.1840000004, green: 0.202000007, blue: 0.2189999968, alpha: 1) : #colorLiteral(red: 0.1840000004, green: 0.202000007, blue: 0.2189999968, alpha: 1)
+        // Configure the view for the selected state#colorLiteral(red: 0.1840000004, green: 0.202000007, blue: 0.2189999968, alpha: 1)
     }
 
 }
