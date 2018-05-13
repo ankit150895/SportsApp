@@ -28,6 +28,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mytableview.delegate = self
+        self.mytableview.dataSource = self
     }
     override func viewWillAppear(_ animated: Bool) {
         let menuRightNavigationController = UISideMenuNavigationController(rootViewController: CustomView())

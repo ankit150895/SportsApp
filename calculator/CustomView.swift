@@ -34,7 +34,9 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
     
     var myhomeCategory = ["Wallpapers","Videos","Quotes"]
     var myCellLabel = ["Get all the cool photos of Virat Kohli here","Some of the insight Videos of our champ - VK","Get to know what the celebs are talking about our home boy!"]
-    @IBOutlet weak var myTableView : UITableView!
+    //@IBOutlet weak var myTableView : UITableView!
+    
+    @IBOutlet weak var dataTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -50,6 +52,7 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
         cell.homeCellLabel.font = UIFont.boldSystemFont(ofSize: 20)
         cell.homeCellLabel.numberOfLines = 2
         cell.homeCellLabel.text = myCellLabel[indexPath.section]
+        cell.selectionStyle = .none
         if dataFetchCompleted == true {
             if indexPath.section == 0{
         let MyImageString = myWallpaperData[0].image
@@ -122,7 +125,9 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+//        let vc = segue.destination as! UISideMenuNavigationController
+//        let destinationvc = vc.topViewController as! MenuViewController
+//        self.present(destinationvc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -189,11 +194,13 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
             }else{
                 self.dataFetchCompleted = false
             }
-            self.myTableView.reloadData()
+            if self.dataTableView != nil{
+                self.dataTableView.reloadData()
+            }
             
         }
-            self.myTableView.delegate = self
-            self.myTableView.dataSource = self
+           // self.dataTableView.delegate = self
+           // self.dataTableView.dataSource = self
         
         }
     }

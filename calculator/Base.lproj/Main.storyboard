@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhG-3q-PxC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhG-3q-PxC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,8 +67,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="iRB-V1-Ieb" id="DRi-RA-okg"/>
-                                    <outlet property="delegate" destination="iRB-V1-Ieb" id="mag-AG-DAN"/>
+                                    <outlet property="dataSource" destination="iRB-V1-Ieb" id="uaU-0V-XCt"/>
+                                    <outlet property="delegate" destination="iRB-V1-Ieb" id="gfg-sF-RtR"/>
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KohliSideMenuBanner" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-wT-van">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpk-VB-HjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232.80000000000001" y="841.52923538230891"/>
+            <point key="canvasLocation" x="233" y="975"/>
         </scene>
         <!--Custom View-->
         <scene sceneID="i94-En-SV4">
@@ -176,12 +176,12 @@
                         <barButtonItem key="leftBarButtonItem" image="more.png" id="D7I-pz-Vsv">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="LRq-Yn-ITk" kind="show" identifier="MenuSeague" id="QFo-pt-inv"/>
+                                <segue destination="LRq-Yn-ITk" kind="presentation" identifier="MenuSeague" id="QFo-pt-inv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="myTableView" destination="PS5-Jk-mtJ" id="VBs-Of-4Ii"/>
+                        <outlet property="dataTableView" destination="PS5-Jk-mtJ" id="YYA-2B-I1G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzH-QA-zlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,7 +260,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JY9-5U-ahp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-503" y="842"/>
+            <point key="canvasLocation" x="-503" y="975"/>
         </scene>
     </scenes>
     <resources>
