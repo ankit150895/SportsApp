@@ -188,37 +188,101 @@
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="87.706146926536732"/>
         </scene>
-        <!--Trial View Controller-->
-        <scene sceneID="UAG-kL-PBB">
+        <!--About Kohli View Controller-->
+        <scene sceneID="amH-FY-FO6">
             <objects>
-                <viewController storyboardIdentifier="TrialViewController" id="u1u-IA-58q" customClass="TrialViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FVO-qb-5oF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="brY-jl-zWD" customClass="AboutKohliViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C5n-7a-ywt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xt-eg-gET">
-                                <rect key="frame" x="0.0" y="20" width="46" height="46"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2O-V1-N5n">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1431"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSi-De-lzF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="525"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="54808121.cms" translatesAutoresizingMaskIntoConstraints="NO" id="Ufl-QX-ueF">
+                                                <rect key="frame" x="112" y="20" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="2nM-Tm-fUI"/>
+                                                    <constraint firstAttribute="width" constant="150" id="ZAK-hg-WMt"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="75"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M18-ML-68B">
+                                                <rect key="frame" x="112" y="187" width="150" height="94.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="M18-ML-68B" firstAttribute="centerX" secondItem="Ufl-QX-ueF" secondAttribute="centerX" id="8SR-dT-Ypn"/>
+                                            <constraint firstItem="M18-ML-68B" firstAttribute="width" secondItem="Ufl-QX-ueF" secondAttribute="width" id="NLL-HU-fvl"/>
+                                            <constraint firstItem="M18-ML-68B" firstAttribute="height" secondItem="mSi-De-lzF" secondAttribute="height" multiplier="0.18" id="civ-oK-bS6"/>
+                                            <constraint firstItem="M18-ML-68B" firstAttribute="top" secondItem="Ufl-QX-ueF" secondAttribute="bottom" multiplier="1.1" id="kKw-6H-iT5"/>
+                                            <constraint firstItem="Ufl-QX-ueF" firstAttribute="top" secondItem="mSi-De-lzF" secondAttribute="top" multiplier="0.1" constant="20" symbolic="YES" id="qJJ-aY-7Lh"/>
+                                            <constraint firstItem="Ufl-QX-ueF" firstAttribute="centerX" secondItem="mSi-De-lzF" secondAttribute="centerX" id="wAP-hU-gNi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-mB-3Jm" customClass="Segmentio" customModule="Segmentio">
+                                        <rect key="frame" x="0.0" y="338" width="375" height="114.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="hSR-z1-ed0"/>
-                                    <constraint firstAttribute="height" constant="46" id="vA9-B6-ard"/>
+                                    <constraint firstItem="mSi-De-lzF" firstAttribute="centerX" secondItem="f2O-V1-N5n" secondAttribute="centerX" id="H1o-cr-Ppi"/>
+                                    <constraint firstAttribute="trailing" secondItem="mSi-De-lzF" secondAttribute="trailing" id="Ja2-lK-eKm"/>
+                                    <constraint firstItem="RDp-mB-3Jm" firstAttribute="centerX" secondItem="f2O-V1-N5n" secondAttribute="centerX" id="KDp-fg-3Ie"/>
+                                    <constraint firstItem="mSi-De-lzF" firstAttribute="leading" secondItem="f2O-V1-N5n" secondAttribute="leading" id="OqT-Ra-swp"/>
+                                    <constraint firstItem="RDp-mB-3Jm" firstAttribute="top" secondItem="M18-ML-68B" secondAttribute="bottom" multiplier="1.2" id="R4c-LZ-T1x"/>
+                                    <constraint firstItem="mSi-De-lzF" firstAttribute="top" secondItem="f2O-V1-N5n" secondAttribute="top" id="UTF-Ia-gOy"/>
+                                    <constraint firstItem="RDp-mB-3Jm" firstAttribute="height" secondItem="f2O-V1-N5n" secondAttribute="height" multiplier="0.08" id="aSt-Cn-yNq"/>
+                                    <constraint firstItem="RDp-mB-3Jm" firstAttribute="width" secondItem="f2O-V1-N5n" secondAttribute="width" id="lig-vG-How"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="LRq-Yn-ITk" kind="presentation" id="D7w-q7-Zvu"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3xt-eg-gET" firstAttribute="leading" secondItem="TUx-tG-eUB" secondAttribute="leading" id="3Jg-4q-gPd"/>
-                            <constraint firstItem="3xt-eg-gET" firstAttribute="top" secondItem="TUx-tG-eUB" secondAttribute="top" id="yqz-Nq-Tm4"/>
+                            <constraint firstItem="xpI-G5-dzF" firstAttribute="bottom" secondItem="f2O-V1-N5n" secondAttribute="bottom" constant="5" id="LFa-Vc-Bt6"/>
+                            <constraint firstItem="f2O-V1-N5n" firstAttribute="top" secondItem="xpI-G5-dzF" secondAttribute="top" id="Ped-IY-gew"/>
+                            <constraint firstItem="f2O-V1-N5n" firstAttribute="leading" secondItem="xpI-G5-dzF" secondAttribute="leading" id="YfD-sV-Zur"/>
+                            <constraint firstItem="mSi-De-lzF" firstAttribute="height" secondItem="C5n-7a-ywt" secondAttribute="height" multiplier="0.35" id="cpD-FT-Dtm"/>
+                            <constraint firstItem="xpI-G5-dzF" firstAttribute="trailing" secondItem="f2O-V1-N5n" secondAttribute="trailing" id="h8H-fc-7QK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TUx-tG-eUB"/>
+                        <viewLayoutGuide key="safeArea" id="xpI-G5-dzF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="p3r-vA-VkW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="more.png" id="RzD-Kg-uET">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="LRq-Yn-ITk" kind="presentation" identifier="AboutKohliSegue" id="3j3-GB-DRw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <outlet property="ScrollView" destination="f2O-V1-N5n" id="kti-Fe-oa6"/>
+                        <outlet property="SegmentioView" destination="RDp-mB-3Jm" id="RU6-Kb-1WG"/>
+                        <outlet property="TitleLabel" destination="M18-ML-68B" id="TBo-6o-Tis"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NEh-Gf-LnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKo-Kf-aAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="322"/>
+            <point key="canvasLocation" x="1682" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fpP-D6-TaC">
@@ -262,8 +326,27 @@
             </objects>
             <point key="canvasLocation" x="-503" y="975"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7eD-uZ-xFG">
+            <objects>
+                <navigationController storyboardIdentifier="AboutKohliViewController" automaticallyAdjustsScrollViewInsets="NO" id="lHM-ae-ECZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="05W-kl-Dsh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="brY-jl-zWD" kind="relationship" relationship="rootViewController" id="XmB-Cl-0Rf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qws-ff-4iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="88"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="54808121.cms" width="800" height="600"/>
         <image name="HeaderDarkBG" width="2500" height="1668"/>
         <image name="KohliSideMenuBanner" width="660" height="440"/>
         <image name="ViratKholiBanner" width="800" height="448"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import SideMenu
+var MyIndexPath = -1
 class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var mytableview: UITableView!
@@ -24,7 +25,15 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.dismiss(animated: true, completion: nil)
+       MyIndexPath = indexPath.row
+        if MyIndexPath == 1 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AboutKohliViewController") as! UINavigationController
+            self.present(vc, animated: false, completion: nil)
+        }
+        else{
+            self.dismiss(animated: true, completion: nil)
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

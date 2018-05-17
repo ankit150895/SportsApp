@@ -85,7 +85,7 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
             if let tempData = data {
                     do{
                         self.myWallpaperData = try JSONDecoder().decode([Wallpapers].self, from: tempData)
-                        print(self.myWallpaperData)
+//                        print(self.myWallpaperData)
                         DispatchQueue.main.async {
                             completed()
                         }
@@ -99,7 +99,7 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
             if let tempData = data {
                 do{
                     self.myVideoData = try JSONDecoder().decode([Videos].self, from: tempData)
-                    print(self.myVideoData)
+//                    print(self.myVideoData)
                     DispatchQueue.main.async {
                         completed()
                     }
@@ -113,7 +113,7 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
             if let tempData = data {
                 do{
                     self.myQuotesData = try JSONDecoder().decode([Quotes].self, from: tempData)
-                    print(self.myQuotesData)
+//                    print(self.myQuotesData)
                     DispatchQueue.main.async {
                         completed()
                     }
@@ -187,7 +187,6 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
         b.font = UIFont.boldSystemFont(ofSize: 20)
         self.navigationController?.navigationBar.addSubview(a)
         self.navigationController?.navigationBar.addSubview(b)
-       
         fetchAPI(){
             if (self.myQuotesData.count != 0 && self.myVideoData.count != 0 && self.myWallpaperData.count != 0){
             self.dataFetchCompleted = true

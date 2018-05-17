@@ -8,22 +8,17 @@
 
 import UIKit
 import CoreData
+import SideMenu
  var firstTimeLaunch = false
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var  launchMessage = ""
-   
-    
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        var navigationBarAppearance = UINavigationBar.appearance()
+        let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.barStyle = .black
         navigationBarAppearance.tintColor = UIColor.black
         navigationBarAppearance.backgroundColor = UIColor.red
-        
-
       //  navigationBarAppearance.topItem?.title.textco
         return true
     }

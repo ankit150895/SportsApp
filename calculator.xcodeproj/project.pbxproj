@@ -17,9 +17,10 @@
 		18446415207F4397005755DA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18446414207F4397005755DA /* CustomView.swift */; };
 		18664D6820872B8600C2E313 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18664D6720872B8600C2E313 /* MenuViewController.swift */; };
 		18664D6A20872BA500C2E313 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18664D6920872BA500C2E313 /* MenuTableViewCell.swift */; };
-		18822DEF209EFAE000BBB1B7 /* TrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18822DEE209EFAE000BBB1B7 /* TrialViewController.swift */; };
 		18F51C402080A66A00DBCB84 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F51C3F2080A65C00DBCB84 /* more.png */; };
 		A8D2231E3E9DE1D6E441B524 /* Pods_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840E7633068D154865303AD2 /* Pods_calculator.framework */; };
+		FFE16B0E20A97D790093077B /* AboutKohliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE16B0D20A97D790093077B /* AboutKohliViewController.swift */; };
+		FFE16B1220A98AFB0093077B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE16B1120A98AFB0093077B /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +36,12 @@
 		18446414207F4397005755DA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		18664D6720872B8600C2E313 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 		18664D6920872BA500C2E313 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		18822DEE209EFAE000BBB1B7 /* TrialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialViewController.swift; sourceTree = "<group>"; };
 		18F51C3F2080A65C00DBCB84 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
 		840E7633068D154865303AD2 /* Pods_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED77316E81D5271C207CCB /* Pods-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calculator/Pods-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		C79DED6E0BD5946EA63C849F /* Pods-calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-calculator/Pods-calculator.release.xcconfig"; sourceTree = "<group>"; };
+		FFE16B0D20A97D790093077B /* AboutKohliViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutKohliViewController.swift; sourceTree = "<group>"; };
+		FFE16B1120A98AFB0093077B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +79,14 @@
 			isa = PBXGroup;
 			children = (
 				18446414207F4397005755DA /* CustomView.swift */,
+				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
 				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
 				09FBA818207DDB860067C6C9 /* Main.storyboard */,
 				0973040020A1B23C006B8850 /* HomeTableViewCell.swift */,
-				18822DEE209EFAE000BBB1B7 /* TrialViewController.swift */,
 				18664D6920872BA500C2E313 /* MenuTableViewCell.swift */,
 				18664D6720872B8600C2E313 /* MenuViewController.swift */,
+				FFE16B0D20A97D790093077B /* AboutKohliViewController.swift */,
 				09FBA81E207DDB860067C6C9 /* Assets.xcassets */,
 				09FBA820207DDB860067C6C9 /* LaunchScreen.storyboard */,
 				09FBA823207DDB860067C6C9 /* Info.plist */,
@@ -207,12 +210,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-calculator/Pods-calculator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Segmentio.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,10 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18664D6820872B8600C2E313 /* MenuViewController.swift in Sources */,
-				18822DEF209EFAE000BBB1B7 /* TrialViewController.swift in Sources */,
 				09DBB3CF20A58C090013073A /* ApiData.swift in Sources */,
+				FFE16B0E20A97D790093077B /* AboutKohliViewController.swift in Sources */,
 				0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */,
 				18664D6A20872BA500C2E313 /* MenuTableViewCell.swift in Sources */,
+				FFE16B1220A98AFB0093077B /* BaseViewController.swift in Sources */,
 				18446415207F4397005755DA /* CustomView.swift in Sources */,
 				09FBA81D207DDB860067C6C9 /* calculator.xcdatamodeld in Sources */,
 				09FBA815207DDB860067C6C9 /* AppDelegate.swift in Sources */,

@@ -7,6 +7,7 @@ target 'calculator' do
   pod 'SideMenu'
 	pod 'Alamofire'
 	pod 'Kingfisher'
+pod 'Segmentio'
   # Pods for calculator
 
 end
