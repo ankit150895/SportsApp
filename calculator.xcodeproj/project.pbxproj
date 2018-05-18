@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0968256620AEDC6E0026E3EE /* DataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968256520AEDC6E0026E3EE /* DataCollectionView.swift */; };
+		0968256820AEEB740026E3EE /* DataCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968256720AEEB740026E3EE /* DataCVCell.swift */; };
 		0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973040020A1B23C006B8850 /* HomeTableViewCell.swift */; };
 		09DBB3CF20A58C090013073A /* ApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB3CE20A58C090013073A /* ApiData.swift */; };
 		09FBA815207DDB860067C6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBA814207DDB860067C6C9 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0968256520AEDC6E0026E3EE /* DataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionView.swift; sourceTree = "<group>"; };
+		0968256720AEEB740026E3EE /* DataCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCVCell.swift; sourceTree = "<group>"; };
 		0973040020A1B23C006B8850 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		09DBB3CE20A58C090013073A /* ApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiData.swift; sourceTree = "<group>"; };
 		09FBA811207DDB860067C6C9 /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				18446414207F4397005755DA /* CustomView.swift */,
+				0968256520AEDC6E0026E3EE /* DataCollectionView.swift */,
+				0968256720AEEB740026E3EE /* DataCVCell.swift */,
 				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
 				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
@@ -124,6 +130,7 @@
 				09FBA80E207DDB860067C6C9 /* Frameworks */,
 				09FBA80F207DDB860067C6C9 /* Resources */,
 				D81DB1664BE7E4FDC15934D2 /* [CP] Embed Pods Frameworks */,
+				456527014437F6279ADC3541 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +190,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		456527014437F6279ADC3541 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-calculator/Pods-calculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B14E9E10E08D6C607A0161B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0968256820AEEB740026E3EE /* DataCVCell.swift in Sources */,
+				0968256620AEDC6E0026E3EE /* DataCollectionView.swift in Sources */,
 				18664D6820872B8600C2E313 /* MenuViewController.swift in Sources */,
 				09DBB3CF20A58C090013073A /* ApiData.swift in Sources */,
 				FFE16B0E20A97D790093077B /* AboutKohliViewController.swift in Sources */,

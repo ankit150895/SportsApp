@@ -78,6 +78,22 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
         return cell
     }
     
+    @objc func viewAll( sender : UIButton){
+        if sender.tag == 0{
+         lbl = "Wallpapers"
+         link = "http://mapi.trycatchtech.com/v1/virat_kohli/virat_kohli_wallpapers_list?page=1"
+        }
+        if sender.tag == 1{
+        lbl = "Videos"
+        link = "http://mapi.trycatchtech.com/v1/virat_kohli/virat_kohli_videos_list?page=1"
+        }
+        if sender.tag == 2{
+        lbl = "Quotes"
+        link = "http://mapi.trycatchtech.com/v1/virat_kohli/virat_kohli_quotes_list?page=1"
+        }
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController
+        self.present(vc, animated: false, completion: nil)
+    }
     
     func fetchAPI(completed: @escaping () -> ()){
         let url = URL(string : "http://mapi.trycatchtech.com/v1/virat_kohli/virat_kohli_wallpapers_list?page=1")
@@ -155,6 +171,8 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
         buttonView.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         buttonView.layer.borderWidth = 2
         buttonView.layer.borderColor = UIColor.lightGray.cgColor
+        buttonView.tag = section
+        buttonView.addTarget(self, action: #selector(viewAll(sender:)), for: .touchUpInside)
         
         headerView.addSubview(sideView)
         headerView.addSubview(myTitleLabel)

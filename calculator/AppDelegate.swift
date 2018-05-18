@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.barStyle = .black
         navigationBarAppearance.tintColor = UIColor.black
         navigationBarAppearance.backgroundColor = UIColor.red
-      //  navigationBarAppearance.topItem?.title.textco
         return true
     }
 
