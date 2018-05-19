@@ -11,6 +11,7 @@ import UIKit
 var lbl = ""
 var link = ""
 var apiImages = NSArray()
+var fullImgBridge = 0
 class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var datafetch = false
@@ -37,7 +38,12 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width / 2 - 20, height: self.view.frame.width / 2 - 20)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
+        fullImgBridge = indexPath.item
+        vc.myPhotoLink = (apiImages.object(at: fullImgBridge) as! NSDictionary).value(forKey: "image") as! String
+        self.present(vc, animated: true, completion: nil)
+    }
     func apiData(completed: @escaping () -> ()){
         let url = URL(string : link)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -78,7 +84,7 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     }
 
     @IBAction func showMenu(){
-        self.dismiss(animated: true, completion: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -12,12 +12,12 @@ var MyIndexPath = -1
 class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var mytableview: UITableView!
-    var menuHeading = ["Home","About KOHLI","RCB Special","Favourties","Invite","App Info","Disclamer"]
+    var menuHeading = ["Home","About KOHLI","RCB Special","Favourties","Invite","App Info"]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuHeading.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return mytableview.frame.height/7
+        return mytableview.frame.height/6
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuTableViewCell
@@ -36,7 +36,17 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let sidevc = self.navigationController as! UISideMenuNavigationController
             sidevc.show(vc, sender: nil)
         }
-        else{
+        else if MyIndexPath == 5{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AppInfoViewController") as! AppInfoViewController
+            let sidevc = self.navigationController as! UISideMenuNavigationController
+            sidevc.show(vc, sender: nil)
+        }
+        else if MyIndexPath == 3{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
+            let sidevc = self.navigationController as! UISideMenuNavigationController
+            sidevc.show(vc, sender: nil)
+        }
+        else {
             self.dismiss(animated: true, completion: nil)
         }
         
