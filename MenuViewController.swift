@@ -27,8 +27,14 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        MyIndexPath = indexPath.row
         if MyIndexPath == 1 {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "AboutKohliViewController") as! UINavigationController
-            self.present(vc, animated: false, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "KohliVC") as! AboutKohliViewController
+            let sidevc = self.navigationController as! UISideMenuNavigationController
+            sidevc.show(vc, sender: nil)
+        }
+        else if MyIndexPath == 0 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "CustomVC") as! CustomView
+            let sidevc = self.navigationController as! UISideMenuNavigationController
+            sidevc.show(vc, sender: nil)
         }
         else{
             self.dismiss(animated: true, completion: nil)

@@ -101,7 +101,7 @@
         <!--Custom View-->
         <scene sceneID="i94-En-SV4">
             <objects>
-                <viewController storyboardIdentifier="CustomView" id="H6M-dp-KYq" customClass="CustomView" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H6M-dp-KYq" customClass="CustomView" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17C-w2-d5t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,7 @@
         <!--About Kohli View Controller-->
         <scene sceneID="amH-FY-FO6">
             <objects>
-                <viewController id="brY-jl-zWD" customClass="AboutKohliViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KohliVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brY-jl-zWD" customClass="AboutKohliViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5n-7a-ywt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,7 +373,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fpP-D6-TaC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jhG-3q-PxC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CustomView" automaticallyAdjustsScrollViewInsets="NO" id="jhG-3q-PxC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="spU-w5-nv8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -457,6 +457,6 @@
         <image name="more.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QFo-pt-inv"/>
+        <segue reference="3j3-GB-DRw"/>
     </inferredMetricsTieBreakers>
 </document>
