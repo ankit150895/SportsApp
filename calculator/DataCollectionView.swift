@@ -61,7 +61,6 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var headerLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         apiData(){
             self.datafetch = true
             self.dataCV.reloadData()
