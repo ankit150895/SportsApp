@@ -12,7 +12,7 @@ var MyIndexPath = -1
 class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var mytableview: UITableView!
-    var menuHeading = ["Home","About KOHLI","RCB Special","Favourties","Invite","App Info"]
+    var menuHeading = ["Home","About KOHLI","RCB Special","Favourites","Invite","App Info"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuHeading.count

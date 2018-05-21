@@ -11,7 +11,6 @@ import UIKit
 class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     
     var imagelabel = ["Fixtures", "Squad" , "Gallery", "Slogan"]
-   // var images = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imagelabel.count
@@ -20,10 +19,22 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rcbCell", for: indexPath) as! RCBCVCell
         cell.imageLabel.text = imagelabel[indexPath.item]
+        cell.imageLabel.layer.cornerRadius = 25
+        cell.imageLabel.clipsToBounds = true
         cell.backgroundColor = collectionView.backgroundColor
+        if indexPath.item == 0{
+            cell.imageView.image = #imageLiteral(resourceName: "versus.png")
+        }
+        if indexPath.item == 1{
+            cell.imageView.image = #imageLiteral(resourceName: "Squad")
+        }
+        if indexPath.item == 2{
+            cell.imageView.image = #imageLiteral(resourceName: "gallery.png")
+        }
+        if indexPath.item == 3{
+            cell.imageView.image = #imageLiteral(resourceName: "Slogan.jpg")
+        }
         cell.imageView.layer.cornerRadius = cell.imageView.frame.width * 0.5
-       
-        cell.imageView.backgroundColor = UIColor.red
         cell.imageView.clipsToBounds = true
         return cell
     }

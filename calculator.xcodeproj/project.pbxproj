@@ -94,12 +94,12 @@
 		09FBA813207DDB860067C6C9 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
+				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				18446414207F4397005755DA /* CustomView.swift */,
 				0968256520AEDC6E0026E3EE /* DataCollectionView.swift */,
 				0968256720AEEB740026E3EE /* DataCVCell.swift */,
 				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
-				09DBB3CE20A58C090013073A /* ApiData.swift */,
-				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
 				FFB4027420B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift */,
 				FFB4027220B0357F003A49E8 /* FullPhotoViewController.swift */,
 				FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */,

@@ -48,6 +48,7 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
         let url = URL(string : link)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if let tempData = data {
+                    print(tempData)
                     self.apiImages = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! NSArray
                     print(self.apiImages)
                     DispatchQueue.main.async {
