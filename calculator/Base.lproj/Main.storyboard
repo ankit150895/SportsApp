@@ -447,7 +447,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITt-pI-Vkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< Updated upstream
             <point key="canvasLocation" x="3335" y="166"/>
         </scene>
         <!--SpecialVC-->
@@ -551,9 +550,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcv-LJ-SBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4501.6000000000004" y="1042.128935532234"/>
-=======
-            <point key="canvasLocation" x="2231" y="618"/>
->>>>>>> Stashed changes
         </scene>
         <!--Data Collection View-->
         <scene sceneID="HO9-Os-59v">
@@ -779,7 +775,6 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="618"/>
         </scene>
-<<<<<<< Updated upstream
         <!--Navigation Controller-->
         <scene sceneID="icm-2B-9r6">
             <objects>
@@ -797,7 +792,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNz-Kp-Ggi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3487" y="910"/>
-=======
+            </scene>
         <!--First Container View Controller-->
         <scene sceneID="7E0-Lf-Gah">
             <objects>
@@ -1295,7 +1290,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPz-zq-cCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5050" y="132"/>
->>>>>>> Stashed changes
         </scene>
     </scenes>
     <resources>
@@ -1307,10 +1301,7 @@
         <image name="specialbanner" width="1393" height="767"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< Updated upstream
         <segue reference="1yE-hn-MpL"/>
-=======
         <segue reference="D4P-KA-1u8"/>
->>>>>>> Stashed changes
     </inferredMetricsTieBreakers>
 </document>

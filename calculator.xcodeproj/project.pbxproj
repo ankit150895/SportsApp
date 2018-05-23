@@ -118,8 +118,6 @@
 				0968256520AEDC6E0026E3EE /* DataCollectionView.swift */,
 				0968256720AEEB740026E3EE /* DataCVCell.swift */,
 				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
-<<<<<<< Updated upstream
-=======
 				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
 				09FBA818207DDB860067C6C9 /* Main.storyboard */,
@@ -132,7 +130,6 @@
 				FF060E0020B269FA00F200B0 /* SecondContainerViewController.swift */,
 				FF060E0220B26A0700F200B0 /* ThirdContainerViewController.swift */,
 				FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */,
->>>>>>> Stashed changes
 				FFB4027420B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift */,
 				FFB4027220B0357F003A49E8 /* FullPhotoViewController.swift */,
 				FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */,
