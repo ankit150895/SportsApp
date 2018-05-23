@@ -25,10 +25,19 @@
 		18945E6520B176AC0004F027 /* RCBCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18945E6420B176AC0004F027 /* RCBCVCell.swift */; };
 		18F51C402080A66A00DBCB84 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F51C3F2080A65C00DBCB84 /* more.png */; };
 		A8D2231E3E9DE1D6E441B524 /* Pods_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840E7633068D154865303AD2 /* Pods_calculator.framework */; };
+		FF060DFF20B269EB00F200B0 /* FirstContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060DFE20B269EB00F200B0 /* FirstContainerViewController.swift */; };
+		FF060E0120B269FA00F200B0 /* SecondContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0020B269FA00F200B0 /* SecondContainerViewController.swift */; };
+		FF060E0320B26A0700F200B0 /* ThirdContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0220B26A0700F200B0 /* ThirdContainerViewController.swift */; };
+		FF060E0520B26A1600F200B0 /* FourthContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */; };
+		FF0EF75720B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */; };
 		FFB4026F20B02C59003A49E8 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4026E20B02C59003A49E8 /* AppInfoViewController.swift */; };
 		FFB4027120B030E7003A49E8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */; };
 		FFB4027320B0357F003A49E8 /* FullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4027220B0357F003A49E8 /* FullPhotoViewController.swift */; };
 		FFB4027520B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4027420B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift */; };
+		FFDC912220B2C14B0044E82E /* FirstControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC912120B2C14B0044E82E /* FirstControllerTableViewCell.swift */; };
+		FFDC912420B2C8670044E82E /* SecondControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC912320B2C8670044E82E /* SecondControllerTableViewCell.swift */; };
+		FFDC912620B2CA190044E82E /* ThirdContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC912520B2CA190044E82E /* ThirdContainerTableViewCell.swift */; };
+		FFDC912820B2CAC10044E82E /* FourthContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC912720B2CAC10044E82E /* FourthContainerTableViewCell.swift */; };
 		FFE16B0E20A97D790093077B /* AboutKohliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE16B0D20A97D790093077B /* AboutKohliViewController.swift */; };
 		FFE16B1220A98AFB0093077B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE16B1120A98AFB0093077B /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,10 +65,19 @@
 		840E7633068D154865303AD2 /* Pods_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED77316E81D5271C207CCB /* Pods-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calculator/Pods-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		C79DED6E0BD5946EA63C849F /* Pods-calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-calculator/Pods-calculator.release.xcconfig"; sourceTree = "<group>"; };
+		FF060DFE20B269EB00F200B0 /* FirstContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstContainerViewController.swift; sourceTree = "<group>"; };
+		FF060E0020B269FA00F200B0 /* SecondContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContainerViewController.swift; sourceTree = "<group>"; };
+		FF060E0220B26A0700F200B0 /* ThirdContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdContainerViewController.swift; sourceTree = "<group>"; };
+		FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthContainerViewController.swift; sourceTree = "<group>"; };
+		FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondControllerSecondTableViewCell.swift; sourceTree = "<group>"; };
 		FFB4026E20B02C59003A49E8 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		FFB4027220B0357F003A49E8 /* FullPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoViewController.swift; sourceTree = "<group>"; };
 		FFB4027420B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFDC912120B2C14B0044E82E /* FirstControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstControllerTableViewCell.swift; sourceTree = "<group>"; };
+		FFDC912320B2C8670044E82E /* SecondControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondControllerTableViewCell.swift; sourceTree = "<group>"; };
+		FFDC912520B2CA190044E82E /* ThirdContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdContainerTableViewCell.swift; sourceTree = "<group>"; };
+		FFDC912720B2CAC10044E82E /* FourthContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthContainerTableViewCell.swift; sourceTree = "<group>"; };
 		FFE16B0D20A97D790093077B /* AboutKohliViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutKohliViewController.swift; sourceTree = "<group>"; };
 		FFE16B1120A98AFB0093077B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +122,18 @@
 				0968256520AEDC6E0026E3EE /* DataCollectionView.swift */,
 				0968256720AEEB740026E3EE /* DataCVCell.swift */,
 				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
+				09DBB3CE20A58C090013073A /* ApiData.swift */,
+				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
+				09FBA818207DDB860067C6C9 /* Main.storyboard */,
+				FFDC912720B2CAC10044E82E /* FourthContainerTableViewCell.swift */,
+				FFDC912520B2CA190044E82E /* ThirdContainerTableViewCell.swift */,
+				FFDC912320B2C8670044E82E /* SecondControllerTableViewCell.swift */,
+				FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */,
+				FFDC912120B2C14B0044E82E /* FirstControllerTableViewCell.swift */,
+				FF060DFE20B269EB00F200B0 /* FirstContainerViewController.swift */,
+				FF060E0020B269FA00F200B0 /* SecondContainerViewController.swift */,
+				FF060E0220B26A0700F200B0 /* ThirdContainerViewController.swift */,
+				FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */,
 				FFB4027420B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift */,
 				FFB4027220B0357F003A49E8 /* FullPhotoViewController.swift */,
 				FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */,
@@ -278,9 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDC912220B2C14B0044E82E /* FirstControllerTableViewCell.swift in Sources */,
+				FF060E0120B269FA00F200B0 /* SecondContainerViewController.swift in Sources */,
+				FFDC912420B2C8670044E82E /* SecondControllerTableViewCell.swift in Sources */,
+				FF0EF75720B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift in Sources */,
+				FFDC912620B2CA190044E82E /* ThirdContainerTableViewCell.swift in Sources */,
 				0968256820AEEB740026E3EE /* DataCVCell.swift in Sources */,
 				0968256620AEDC6E0026E3EE /* DataCollectionView.swift in Sources */,
+				FF060E0520B26A1600F200B0 /* FourthContainerViewController.swift in Sources */,
 				FFB4027520B03E7F003A49E8 /* FullPhotoCollectionViewCell.swift in Sources */,
+				FFDC912820B2CAC10044E82E /* FourthContainerTableViewCell.swift in Sources */,
+				FF060E0320B26A0700F200B0 /* ThirdContainerViewController.swift in Sources */,
+				FF060DFF20B269EB00F200B0 /* FirstContainerViewController.swift in Sources */,
 				18664D6820872B8600C2E313 /* MenuViewController.swift in Sources */,
 				09DBB3CF20A58C090013073A /* ApiData.swift in Sources */,
 				FFB4027120B030E7003A49E8 /* FavouritesViewController.swift in Sources */,
