@@ -51,7 +51,6 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         if indexPath.item == 1{
             let vc = storyboard?.instantiateViewController(withIdentifier: "RCBSquadView") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
-            lbl = "RCB Squad"
         }
         else if indexPath.item == 2 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController

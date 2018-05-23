@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhG-3q-PxC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhG-3q-PxC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -562,11 +562,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RCB SQUAD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-kR-h3U">
                                 <rect key="frame" x="0.0" y="64" width="375" height="66.5"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.9951923077" green="1" blue="0.9903846154" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-dU-nNt">
+                            <segmentedControl opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-dU-nNt">
                                 <rect key="frame" x="0.0" y="132.5" width="375" height="47.5"/>
                                 <color key="backgroundColor" red="0.18315751903553301" green="0.18315751903553301" blue="0.18315751903553301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
@@ -574,8 +574,12 @@
                                     <segment title="Batsmen"/>
                                     <segment title="Bowler"/>
                                     <segment title="All Rounder"/>
+                                    <segment title="Keeper"/>
                                 </segments>
                                 <color key="tintColor" red="0.78851274012142936" green="0.79631979695431476" blue="0.79631979695431476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentPressed:" destination="T4T-1t-TCK" eventType="valueChanged" id="mHD-Fg-K8z"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vxV-GO-vW3">
                                 <rect key="frame" x="0.0" y="181" width="375" height="486"/>
@@ -596,14 +600,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBP-JR-9GT">
-                                                    <rect key="frame" x="25" y="5" width="130" height="121"/>
+                                                    <rect key="frame" x="26.5" y="2" width="127" height="117.5"/>
                                                     <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="50"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-Lj-Gc0">
-                                                    <rect key="frame" x="25" y="136" width="130" height="33.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-Lj-Gc0">
+                                                    <rect key="frame" x="-0.5" y="119.5" width="181.5" height="48.5"/>
                                                     <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" red="0.9951923077" green="1" blue="0.9903846154" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -615,12 +619,12 @@
                                         <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="xBP-JR-9GT" firstAttribute="centerX" secondItem="yf2-7i-pJI" secondAttribute="centerX" id="2cd-W0-WT8"/>
-                                            <constraint firstItem="xBP-JR-9GT" firstAttribute="height" secondItem="yf2-7i-pJI" secondAttribute="height" multiplier="0.72" id="Cu8-JS-cwr"/>
-                                            <constraint firstItem="xBP-JR-9GT" firstAttribute="width" secondItem="yf2-7i-pJI" secondAttribute="width" multiplier="0.72" id="FqP-QE-MnX"/>
-                                            <constraint firstItem="SMb-Lj-Gc0" firstAttribute="width" secondItem="xBP-JR-9GT" secondAttribute="width" id="U1G-KU-HST"/>
-                                            <constraint firstItem="SMb-Lj-Gc0" firstAttribute="height" secondItem="yf2-7i-pJI" secondAttribute="height" multiplier="0.2" id="XoS-tB-0kN"/>
-                                            <constraint firstItem="SMb-Lj-Gc0" firstAttribute="top" secondItem="xBP-JR-9GT" secondAttribute="bottom" constant="10" id="gfk-L7-ZMO"/>
-                                            <constraint firstItem="xBP-JR-9GT" firstAttribute="top" secondItem="yf2-7i-pJI" secondAttribute="top" constant="5" id="nXk-CV-aaU"/>
+                                            <constraint firstItem="xBP-JR-9GT" firstAttribute="height" secondItem="yf2-7i-pJI" secondAttribute="height" multiplier="0.7" id="Cu8-JS-cwr"/>
+                                            <constraint firstItem="xBP-JR-9GT" firstAttribute="width" secondItem="yf2-7i-pJI" secondAttribute="width" multiplier="0.7" id="FqP-QE-MnX"/>
+                                            <constraint firstItem="SMb-Lj-Gc0" firstAttribute="height" secondItem="yf2-7i-pJI" secondAttribute="height" multiplier="0.29" id="XoS-tB-0kN"/>
+                                            <constraint firstItem="SMb-Lj-Gc0" firstAttribute="top" secondItem="xBP-JR-9GT" secondAttribute="bottom" id="gfk-L7-ZMO"/>
+                                            <constraint firstItem="SMb-Lj-Gc0" firstAttribute="width" secondItem="yf2-7i-pJI" secondAttribute="width" id="mGa-KV-mDW"/>
+                                            <constraint firstItem="xBP-JR-9GT" firstAttribute="top" secondItem="yf2-7i-pJI" secondAttribute="top" constant="2" id="nXk-CV-aaU"/>
                                             <constraint firstItem="SMb-Lj-Gc0" firstAttribute="centerX" secondItem="xBP-JR-9GT" secondAttribute="centerX" id="uaP-1w-B1E"/>
                                         </constraints>
                                         <connections>
@@ -660,6 +664,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myCollectionView" destination="vxV-GO-vW3" id="m97-Qh-RcX"/>
+                        <outlet property="mySegment" destination="g0d-dU-nNt" id="I7M-48-geR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9e-Nr-QSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -916,7 +924,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNz-Kp-Ggi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3487" y="910"/>
-            </scene>
+        </scene>
         <!--First Container View Controller-->
         <scene sceneID="7E0-Lf-Gah">
             <objects>
@@ -1445,7 +1453,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8gT-yB-Blc"/>
-        <segue reference="1yE-hn-MpL"/>
-        <segue reference="D4P-KA-1u8"/>
     </inferredMetricsTieBreakers>
 </document>
