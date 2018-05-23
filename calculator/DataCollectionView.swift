@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import AVKit
 
 var lbl = ""
 var link = ""
-var apiImages = NSArray()
+
 var fullImgBridge = 0
 class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -18,15 +19,25 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var dataCV: UICollectionView!
     var apiImages = NSArray()
     
+    var playerInfo = [["name" : "ABD" , "skills" : "Batsmen"]] as NSArray
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return apiImages.count
+        return self.apiImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dataCell", for: indexPath) as! DataCVCell
         if datafetch == true{
-        let  url = URL(string: (self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String)
-        cell.imageView?.kf.setImage(with: url!)
+            if lbl == "Videos"{
+                let  url = URL(string: ((self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String))
+                //print("my url :\(url)")
+                cell.imageView?.kf.setImage(with: url!)
+            }
+            else {
+                cell.btn.isHidden = true
+                let  url = URL(string: ((self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String))
+                //print("my url :\(url)")
+                cell.imageView?.kf.setImage(with: url!)
+            }
         }
         return cell
     }
@@ -38,24 +49,40 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width / 2 - 20, height: self.view.frame.width / 2 - 20)
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
-        fullImgBridge = indexPath.item
-        vc.myPhotoLink = (apiImages.object(at: fullImgBridge) as! NSDictionary).value(forKey: "image") as! String
-        self.present(vc, animated: true, completion: nil)
+        if lbl == "Videos"{
+            let a  = (self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "url") as! String
+            //let videourl = URL(string: a)
+            let videourl = URL(string: "http://techslides.com/demos/sample-videos/small.mp4")
+            print(a)
+            let playeritem = AVPlayerItem(url : videourl!)
+            let player = AVPlayer(playerItem: playeritem)
+            let vc = AVPlayerViewController()
+            vc.player = player
+            vc.player?.play()
+            self.present(vc, animated: true, completion: nil)
+        }
+        else {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
+            fullImgBridge = indexPath.item
+            vc.myPhotoLink = (apiImages.object(at: fullImgBridge) as! NSDictionary).value(forKey: "image") as! String
+            self.present(vc, animated: true, completion: nil)
+        }
     }
+    
     func apiData(completed: @escaping () -> ()){
         let url = URL(string : link)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if let tempData = data {
-                    print(tempData)
-                    self.apiImages = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! NSArray
-                    print(self.apiImages)
-                    DispatchQueue.main.async {
-                        completed()
-                    }
+                print(tempData)
+                self.apiImages = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! NSArray
+                print(self.apiImages)
+                DispatchQueue.main.async {
+                    completed()
+                }
+            }
         }
-    }
         task.resume()
     }
     
@@ -66,6 +93,8 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
             self.datafetch = true
             self.dataCV.reloadData()
         }
+        
+        headerLabel.text = lbl
         
         let a = UIImageView()
         a.image = #imageLiteral(resourceName: "VKFloatImage")
@@ -79,28 +108,15 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
         self.navigationController?.navigationBar.addSubview(a)
         self.navigationController?.navigationBar.addSubview(b)
         
-        headerLabel.text = lbl
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func showMenu(){
         
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

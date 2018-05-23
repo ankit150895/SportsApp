@@ -34,18 +34,36 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         if indexPath.item == 3{
             cell.imageView.image = #imageLiteral(resourceName: "Slogan.jpg")
         }
-        cell.imageView.layer.cornerRadius = cell.imageView.frame.width * 0.5
-        cell.imageView.clipsToBounds = true
+          cell.imageView.layer.cornerRadius = cell.imageView.frame.width * 0.5
+          cell.imageView.clipsToBounds = true
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.height * 0.25, height: self.view.frame.height * 0.25)
+        return CGSize(width: (self.view.frame.width - 40) / 2, height: (self.view.frame.width - 40) / 2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(20, 10, 20, 10)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 1{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "RCBSquadView") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+            lbl = "RCB Squad"
+        }
+        else if indexPath.item == 2 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+            lbl = "RCB Gallery"
+            link = "http://mapi.trycatchtech.com/v1/virat_kohli/rcb_images_list?page=1"
+        } else{
+            print("Nothing")
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

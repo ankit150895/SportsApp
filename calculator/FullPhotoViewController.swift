@@ -9,11 +9,14 @@
 import UIKit
 
 class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
     var myPhotoLink = ""
+    
     @IBOutlet weak var collectionviewInst: UICollectionView!
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
+    
     @IBAction func Xfunction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -25,11 +28,10 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
         cell.myFullImg.contentMode = .scaleAspectFit
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:self.collectionviewInst.frame.width, height: self.collectionviewInst.frame.height)
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +43,5 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }
