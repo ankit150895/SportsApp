@@ -48,14 +48,17 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == 1{
+        if indexPath.item == 0 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "FixturesViewController") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
+        else if indexPath.item == 1{
             let vc = storyboard?.instantiateViewController(withIdentifier: "RCBSquadView") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
         }
         else if indexPath.item == 2 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
-            lbl = "RCB Gallery"
             link = "http://mapi.trycatchtech.com/v1/virat_kohli/rcb_images_list?page=1"
         } else{
             print("Nothing")

@@ -29,6 +29,8 @@
 		FF060E0120B269FA00F200B0 /* SecondContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0020B269FA00F200B0 /* SecondContainerViewController.swift */; };
 		FF060E0320B26A0700F200B0 /* ThirdContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0220B26A0700F200B0 /* ThirdContainerViewController.swift */; };
 		FF060E0520B26A1600F200B0 /* FourthContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */; };
+		FF0C13B220B5A86F00AA3BEF /* FixturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C13B120B5A86F00AA3BEF /* FixturesViewController.swift */; };
+		FF0C13B420B5A8C200AA3BEF /* FixturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C13B320B5A8C200AA3BEF /* FixturesTableViewCell.swift */; };
 		FF0EF75720B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */; };
 		FFB4026F20B02C59003A49E8 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4026E20B02C59003A49E8 /* AppInfoViewController.swift */; };
 		FFB4027120B030E7003A49E8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */; };
@@ -69,6 +71,8 @@
 		FF060E0020B269FA00F200B0 /* SecondContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContainerViewController.swift; sourceTree = "<group>"; };
 		FF060E0220B26A0700F200B0 /* ThirdContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdContainerViewController.swift; sourceTree = "<group>"; };
 		FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthContainerViewController.swift; sourceTree = "<group>"; };
+		FF0C13B120B5A86F00AA3BEF /* FixturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesViewController.swift; sourceTree = "<group>"; };
+		FF0C13B320B5A8C200AA3BEF /* FixturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewCell.swift; sourceTree = "<group>"; };
 		FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondControllerSecondTableViewCell.swift; sourceTree = "<group>"; };
 		FFB4026E20B02C59003A49E8 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -116,15 +120,12 @@
 		09FBA813207DDB860067C6C9 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
-				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
-				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				18446414207F4397005755DA /* CustomView.swift */,
 				0968256520AEDC6E0026E3EE /* DataCollectionView.swift */,
 				0968256720AEEB740026E3EE /* DataCVCell.swift */,
 				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
 				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
-				09FBA818207DDB860067C6C9 /* Main.storyboard */,
 				FFDC912720B2CAC10044E82E /* FourthContainerTableViewCell.swift */,
 				FFDC912520B2CA190044E82E /* ThirdContainerTableViewCell.swift */,
 				FFDC912320B2C8670044E82E /* SecondControllerTableViewCell.swift */,
@@ -147,6 +148,8 @@
 				09C2E9EF20B552DE00FB4F9B /* RCBSquadView.swift */,
 				09C2E9F120B5532100FB4F9B /* RCBSquadCell.swift */,
 				09FBA818207DDB860067C6C9 /* Main.storyboard */,
+				FF0C13B120B5A86F00AA3BEF /* FixturesViewController.swift */,
+				FF0C13B320B5A8C200AA3BEF /* FixturesTableViewCell.swift */,
 				09FBA81E207DDB860067C6C9 /* Assets.xcassets */,
 				09FBA820207DDB860067C6C9 /* LaunchScreen.storyboard */,
 				09FBA823207DDB860067C6C9 /* Info.plist */,
@@ -184,7 +187,7 @@
 				09FBA80E207DDB860067C6C9 /* Frameworks */,
 				09FBA80F207DDB860067C6C9 /* Resources */,
 				D81DB1664BE7E4FDC15934D2 /* [CP] Embed Pods Frameworks */,
-				749F696FEC497CBD70D19599 /* [CP] Copy Pods Resources */,
+				3291C761888AE9F151DAA0A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,7 +247,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		749F696FEC497CBD70D19599 /* [CP] Copy Pods Resources */ = {
+		3291C761888AE9F151DAA0A3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,6 +316,7 @@
 				FFDC912420B2C8670044E82E /* SecondControllerTableViewCell.swift in Sources */,
 				FF0EF75720B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift in Sources */,
 				FFDC912620B2CA190044E82E /* ThirdContainerTableViewCell.swift in Sources */,
+				FF0C13B420B5A8C200AA3BEF /* FixturesTableViewCell.swift in Sources */,
 				0968256820AEEB740026E3EE /* DataCVCell.swift in Sources */,
 				0968256620AEDC6E0026E3EE /* DataCollectionView.swift in Sources */,
 				FF060E0520B26A1600F200B0 /* FourthContainerViewController.swift in Sources */,
@@ -332,6 +336,7 @@
 				09FBA81D207DDB860067C6C9 /* calculator.xcdatamodeld in Sources */,
 				18945E6520B176AC0004F027 /* RCBCVCell.swift in Sources */,
 				FFB4026F20B02C59003A49E8 /* AppInfoViewController.swift in Sources */,
+				FF0C13B220B5A86F00AA3BEF /* FixturesViewController.swift in Sources */,
 				FFB4027320B0357F003A49E8 /* FullPhotoViewController.swift in Sources */,
 				18945E6320B170C90004F027 /* RCBSpecialVC.swift in Sources */,
 				09FBA815207DDB860067C6C9 /* AppDelegate.swift in Sources */,
