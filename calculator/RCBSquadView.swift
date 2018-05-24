@@ -82,6 +82,15 @@ class RCBSquadView: UIViewController, UICollectionViewDataSource, UICollectionVi
         super.viewDidLoad()
         allPlayers = wicketkeeper + batsmen + bowler + allrounder
         allPlayersPic = wicketkeeperPic + batsmenPic + bowlerPic + allrounderPic
+        
+        mySegment.setWidth(self.view.frame.width * 0.1, forSegmentAt: 0)
+        mySegment.setWidth(self.view.frame.width * 0.2, forSegmentAt: 1)
+        mySegment.setWidth(self.view.frame.width * 0.15, forSegmentAt: 2)
+        mySegment.setWidth(self.view.frame.width * 0.25, forSegmentAt: 3)
+        mySegment.setWidth(self.view.frame.width * 0.3, forSegmentAt: 4)
+        let font = UIFont.boldSystemFont(ofSize: 16)
+        mySegment.setTitleTextAttributes([NSAttributedStringKey.font : font], for: .normal)
+        
         let a = UIImageView()
         a.image = #imageLiteral(resourceName: "VKFloatImage")
         a.frame = CGRect(x: self.view.frame.width - 75, y: self.view.frame.height * 0.02, width: self.view.frame.width * 0.18, height: self.view.frame.width * 0.18)

@@ -664,14 +664,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-dU-nNt">
-                                <rect key="frame" x="0.0" y="132.5" width="375" height="47.5"/>
+                                <rect key="frame" x="0.0" y="132.5" width="375" height="67.5"/>
                                 <color key="backgroundColor" red="0.18315751903553301" green="0.18315751903553301" blue="0.18315751903553301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="Batsmen"/>
                                     <segment title="Bowler"/>
                                     <segment title="All Rounder"/>
-                                    <segment title="Keeper"/>
+                                    <segment title="Wicket Keeper"/>
                                 </segments>
                                 <color key="tintColor" red="0.78851274012142936" green="0.79631979695431476" blue="0.79631979695431476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -679,7 +679,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vxV-GO-vW3">
-                                <rect key="frame" x="0.0" y="181" width="375" height="486"/>
+                                <rect key="frame" x="0.0" y="201" width="375" height="466"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.43006929929332144" green="0.43432741116751272" blue="0.43432741116751272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QB0-x2-zhv">
@@ -749,7 +749,7 @@
                             <constraint firstItem="vxV-GO-vW3" firstAttribute="top" secondItem="g0d-dU-nNt" secondAttribute="bottom" constant="2" id="a6k-o5-vCt"/>
                             <constraint firstItem="mrM-kR-h3U" firstAttribute="height" secondItem="ceM-cN-bRH" secondAttribute="height" multiplier="0.1" id="djg-JT-UbM"/>
                             <constraint firstItem="g0d-dU-nNt" firstAttribute="centerX" secondItem="mrM-kR-h3U" secondAttribute="centerX" id="ud1-7b-COX"/>
-                            <constraint firstItem="g0d-dU-nNt" firstAttribute="height" secondItem="ceM-cN-bRH" secondAttribute="height" multiplier="0.07" id="xhD-bX-DB2"/>
+                            <constraint firstItem="g0d-dU-nNt" firstAttribute="height" secondItem="ceM-cN-bRH" secondAttribute="height" multiplier="0.1" id="xhD-bX-DB2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UDD-aB-0EK"/>
                     </view>
@@ -1567,8 +1567,6 @@
         <image name="specialbanner" width="1393" height="767"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8gT-yB-Blc"/>
-        <segue reference="UdM-AA-Yrg"/>
-
+        <segue reference="aHY-5g-wDk"/>
     </inferredMetricsTieBreakers>
 </document>

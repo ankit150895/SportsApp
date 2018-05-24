@@ -18,6 +18,7 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
     }
     
     @IBAction func Xfunction(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
     }
     
