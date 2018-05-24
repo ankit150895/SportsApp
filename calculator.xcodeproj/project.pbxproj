@@ -31,6 +31,7 @@
 		FF060E0520B26A1600F200B0 /* FourthContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */; };
 		FF0C13B220B5A86F00AA3BEF /* FixturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C13B120B5A86F00AA3BEF /* FixturesViewController.swift */; };
 		FF0C13B420B5A8C200AA3BEF /* FixturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C13B320B5A8C200AA3BEF /* FixturesTableViewCell.swift */; };
+		FF0C883720B6CFB8001500F7 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C883620B6CFB8001500F7 /* FavouriteCollectionViewCell.swift */; };
 		FF0EF75720B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */; };
 		FFB4026F20B02C59003A49E8 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4026E20B02C59003A49E8 /* AppInfoViewController.swift */; };
 		FFB4027120B030E7003A49E8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */; };
@@ -73,6 +74,7 @@
 		FF060E0420B26A1600F200B0 /* FourthContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthContainerViewController.swift; sourceTree = "<group>"; };
 		FF0C13B120B5A86F00AA3BEF /* FixturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesViewController.swift; sourceTree = "<group>"; };
 		FF0C13B320B5A8C200AA3BEF /* FixturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewCell.swift; sourceTree = "<group>"; };
+		FF0C883620B6CFB8001500F7 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF0EF75620B5035C00D1D839 /* SecondControllerSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondControllerSecondTableViewCell.swift; sourceTree = "<group>"; };
 		FFB4026E20B02C59003A49E8 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		FFB4027020B030E7003A49E8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				09C2E9EF20B552DE00FB4F9B /* RCBSquadView.swift */,
 				09C2E9F120B5532100FB4F9B /* RCBSquadCell.swift */,
 				09FBA818207DDB860067C6C9 /* Main.storyboard */,
+				FF0C883620B6CFB8001500F7 /* FavouriteCollectionViewCell.swift */,
 				FF0C13B120B5A86F00AA3BEF /* FixturesViewController.swift */,
 				FF0C13B320B5A8C200AA3BEF /* FixturesTableViewCell.swift */,
 				09FBA81E207DDB860067C6C9 /* Assets.xcassets */,
@@ -187,7 +190,7 @@
 				09FBA80E207DDB860067C6C9 /* Frameworks */,
 				09FBA80F207DDB860067C6C9 /* Resources */,
 				D81DB1664BE7E4FDC15934D2 /* [CP] Embed Pods Frameworks */,
-				3291C761888AE9F151DAA0A3 /* [CP] Copy Pods Resources */,
+				95970219F655C53DB98F1E28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,7 +250,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3291C761888AE9F151DAA0A3 /* [CP] Copy Pods Resources */ = {
+		95970219F655C53DB98F1E28 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,6 +334,7 @@
 				0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */,
 				09C2E9F220B5532100FB4F9B /* RCBSquadCell.swift in Sources */,
 				18664D6A20872BA500C2E313 /* MenuTableViewCell.swift in Sources */,
+				FF0C883720B6CFB8001500F7 /* FavouriteCollectionViewCell.swift in Sources */,
 				FFE16B1220A98AFB0093077B /* BaseViewController.swift in Sources */,
 				18446415207F4397005755DA /* CustomView.swift in Sources */,
 				09FBA81D207DDB860067C6C9 /* calculator.xcdatamodeld in Sources */,

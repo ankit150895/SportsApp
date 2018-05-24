@@ -60,7 +60,7 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
             let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController
             self.present(vc, animated: false, completion: nil)
             link = "http://mapi.trycatchtech.com/v1/virat_kohli/rcb_images_list?page=1"
-            lbl = "Gallery"
+            lbl = "RCB Gallery"
         } else{
             print("Nothing")
         }
