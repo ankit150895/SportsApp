@@ -10,6 +10,7 @@
 		0968256620AEDC6E0026E3EE /* DataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968256520AEDC6E0026E3EE /* DataCollectionView.swift */; };
 		0968256820AEEB740026E3EE /* DataCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0968256720AEEB740026E3EE /* DataCVCell.swift */; };
 		0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973040020A1B23C006B8850 /* HomeTableViewCell.swift */; };
+		0980201920B8385000176927 /* VideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980201820B8385000176927 /* VideoPlayVC.swift */; };
 		09C2E9F020B552DE00FB4F9B /* RCBSquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2E9EF20B552DE00FB4F9B /* RCBSquadView.swift */; };
 		09C2E9F220B5532100FB4F9B /* RCBSquadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2E9F120B5532100FB4F9B /* RCBSquadCell.swift */; };
 		09DBB3CF20A58C090013073A /* ApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB3CE20A58C090013073A /* ApiData.swift */; };
@@ -49,6 +50,7 @@
 		0968256520AEDC6E0026E3EE /* DataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionView.swift; sourceTree = "<group>"; };
 		0968256720AEEB740026E3EE /* DataCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCVCell.swift; sourceTree = "<group>"; };
 		0973040020A1B23C006B8850 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		0980201820B8385000176927 /* VideoPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayVC.swift; sourceTree = "<group>"; };
 		09C2E9EF20B552DE00FB4F9B /* RCBSquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCBSquadView.swift; sourceTree = "<group>"; };
 		09C2E9F120B5532100FB4F9B /* RCBSquadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCBSquadCell.swift; sourceTree = "<group>"; };
 		09DBB3CE20A58C090013073A /* ApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiData.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				18446414207F4397005755DA /* CustomView.swift */,
 				0968256520AEDC6E0026E3EE /* DataCollectionView.swift */,
 				0968256720AEEB740026E3EE /* DataCVCell.swift */,
+				0980201820B8385000176927 /* VideoPlayVC.swift */,
 				FFE16B1120A98AFB0093077B /* BaseViewController.swift */,
 				09DBB3CE20A58C090013073A /* ApiData.swift */,
 				09FBA814207DDB860067C6C9 /* AppDelegate.swift */,
@@ -332,6 +335,7 @@
 				FFB4027120B030E7003A49E8 /* FavouritesViewController.swift in Sources */,
 				FFE16B0E20A97D790093077B /* AboutKohliViewController.swift in Sources */,
 				0973040120A1B23C006B8850 /* HomeTableViewCell.swift in Sources */,
+				0980201920B8385000176927 /* VideoPlayVC.swift in Sources */,
 				09C2E9F220B5532100FB4F9B /* RCBSquadCell.swift in Sources */,
 				18664D6A20872BA500C2E313 /* MenuTableViewCell.swift in Sources */,
 				FF0C883720B6CFB8001500F7 /* FavouriteCollectionViewCell.swift in Sources */,

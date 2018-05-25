@@ -11,10 +11,11 @@ import AVKit
 
 var lbl = ""
 var link = ""
-
+var youtubeVideoLink = ""
 var fullImgBridge = 0
+
 class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+    let webView  = UIWebView()
     var datafetch = false
     @IBOutlet weak var dataCV: UICollectionView!
     var apiImages = NSArray()
@@ -52,15 +53,8 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if lbl == "Videos"{
-            let a  = (self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "url") as! String
-            //let videourl = URL(string: a)
-            let videourl = URL(string: "http://techslides.com/demos/sample-videos/small.mp4")
-            print(a)
-            let playeritem = AVPlayerItem(url : videourl!)
-            let player = AVPlayer(playerItem: playeritem)
-            let vc = AVPlayerViewController()
-            vc.player = player
-            vc.player?.play()
+            youtubeVideoLink  = (self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "url") as! String
+            let vc = storyboard?.instantiateViewController(withIdentifier: "VideoPlayVC") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
         }
         else {
@@ -87,6 +81,7 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @IBOutlet weak var headerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         apiData(){
