@@ -23,6 +23,7 @@
 import UIKit
 import SideMenu
 import Kingfisher
+import CoreData
 class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITableViewDelegate,UITableViewDataSource {
     var dataFetchCompleted = false
     var wallpapers = NSArray()
@@ -73,7 +74,7 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
         }
         else
         {
-            print("Data left to fetch")
+           //print("Data left to fetch")
         }
         return cell
     }
@@ -194,6 +195,15 @@ class CustomView: UIViewController,UISideMenuNavigationControllerDelegate,UITabl
     
     override func viewDidLoad() {
       super.viewDidLoad()
+//        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MyDatabase")
+//        let request = NSBatchDeleteRequest(fetchRequest: fetch)
+//        let appdel = UIApplication.shared.delegate as! AppDelegate
+//        let context = appdel.persistentContainer.viewContext
+//        do {
+//             try context.execute(request)
+//        }catch{
+//            print("Not Deleting shit")
+//        }
         let a = UIImageView()
         a.image = #imageLiteral(resourceName: "VKFloatImage")
         a.frame = CGRect(x: self.view.frame.width - 75, y: self.view.frame.height * 0.02, width: self.view.frame.width * 0.18, height: self.view.frame.width * 0.18)

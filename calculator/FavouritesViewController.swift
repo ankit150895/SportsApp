@@ -1,20 +1,28 @@
-//
-//  FavouritesViewController.swift
-//  calculator
-//
-//  Created by Ankit Tanna on 19/05/18.
-//  Copyright © 2018 TryCatch Classes. All rights reserved.
-//
 
 import UIKit
-
+import CoreData
+var imageData = Data()
+var comingfromFavourites = false
 class FavouritesViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Globalindex
+        return rows.count
     }
     
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let fileName = rows[indexPath.item].filepath!
+        let fileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(fileName)
+        do{
+            imageData = try Data(contentsOf: fileUrl)
+        }
+        catch {
+            print("Error loading image : \(error)")
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavouriteCell", for: indexPath) as! FavouriteCollectionViewCell
+        let myURL = rows[indexPath.item].filepath!
+        cell.favouritesImgView.image = UIImage(data: imageData )
         cell.favouritesImgView.backgroundColor = UIColor.purple
         return cell
     }
@@ -24,10 +32,10 @@ class FavouritesViewController: UIViewController,UICollectionViewDelegate,UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (self.view.frame.width-30)/3, height: (self.view.frame.width-30)/3 )
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(Globalindex)
+        
         let a = UIImageView()
         a.image = #imageLiteral(resourceName: "VKFloatImage")
         a.frame = CGRect(x: self.view.frame.width - 75, y: self.view.frame.height * 0.02, width: self.view.frame.width * 0.18, height: self.view.frame.width * 0.18)
@@ -39,23 +47,15 @@ class FavouritesViewController: UIViewController,UICollectionViewDelegate,UIColl
         b.font = UIFont.boldSystemFont(ofSize: 20)
         self.navigationController?.navigationBar.addSubview(a)
         self.navigationController?.navigationBar.addSubview(b)
-        // Do any additional setup after loading the view.
+        let appdel = UIApplication.shared.delegate as! AppDelegate
+        let context = appdel.persistentContainer.viewContext
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MyDatabase")
+        do{
+            rows = try context.fetch(MyDatabase.fetchRequest())
+            myCollectionView.reloadData()
+        }
+        catch{
+            print("Failed fetching")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

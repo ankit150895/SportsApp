@@ -8,7 +8,10 @@
 
 import UIKit
 import CoreData
-var Globalindex = 0
+var myIndex = 0
+var noOffavImg = 0
+var isfilesaved = false
+var rows = [MyDatabase]()
 class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     var myPhotoLink = ""
@@ -41,40 +44,62 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
         let context = appDel.persistentContainer.viewContext
         let userEntity = MyDatabase(context: context)
         let a = String(myPhotoLink.suffix(3))
+        //Get the documents directory URL
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        //Choose a name for your image
+        let fileName = "myPhotoLink_\(myIndex).jpeg"
+        var fileUrl = documentsDirectory.appendingPathComponent(fileName)
+        userEntity.filepath = String(describing: fileName)
+        print("\(userEntity.filepath)")
+        appDel.saveContext()
+        myIndex += 1
         if a == "png" {
-            let url = URL(string: myPhotoLink)
-            if let data = try? Data(contentsOf: url!)
-            {
-                let image : UIImage = UIImage(data: data)!
-                let imageData = UIImagePNGRepresentation(image)
-                print("\(imageData)\n")
-                userEntity.image = imageData
-                userEntity.id = String(index)
-                index += 1
+            let image = UIImageView()
+            let myPhotoUrl = URL(string: myPhotoLink)
+            image.kf.setImage(with: myPhotoUrl)
+            if let data = UIImagePNGRepresentation(image.image!),
+                !FileManager.default.fileExists(atPath: fileUrl.path){
+                do {
+                    try data.write(to: fileUrl)
+                    print("file saved zala")
+                    isfilesaved = true
+                }catch {
+                    print("fucked up:",error)
+                    isfilesaved = false
+                }
             }
         }
         else{
-            let url = URL(string: myPhotoLink)
-            if let data = try? Data(contentsOf: url!)
-            {
-                let image : UIImage = UIImage(data: data)!
-                let imageData = UIImageJPEGRepresentation(image, 0.75)!
-                print("\(imageData)\n")
-                userEntity.image = imageData
-                userEntity.id = String(index)
-                index += 1
+            let image = UIImageView()
+            let myPhotoUrl = URL(string: myPhotoLink)
+            image.kf.setImage(with: myPhotoUrl)
+            if let data = UIImageJPEGRepresentation(image.image!, 1.0),
+                !FileManager.default.fileExists(atPath: fileUrl.path){
+                do {
+                    try data.write(to: fileUrl)
+                    print("file saved zala")
+                    isfilesaved = true
+                }catch {
+                    print("fucked up:",error)
+                    isfilesaved = false
                 }
             }
-        Globalindex = index
-        print("myindex : \(index)")
-        print("AAdil bhia ka index \(Globalindex)")
-        //let BhavinOza = context.
+        }
+        if isfilesaved == true {
+        self.dismiss(animated: true, completion: nil)
+        }else {
+                
+        }
     }
     
-    
+    @IBOutlet weak var savebutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if comingfromFavourites == true {
+            savebutton.isHidden = true
+            savebutton.removeFromSuperview()
+            comingfromFavourites = false
+        }
         // Do any additional setup after loading the view.
     }
 

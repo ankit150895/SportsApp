@@ -13,7 +13,6 @@ var lbl = ""
 var link = ""
 var youtubeVideoLink = ""
 var fullImgBridge = 0
-
 class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let webView  = UIWebView()
     var datafetch = false
@@ -69,9 +68,9 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
         let url = URL(string : link)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if let tempData = data {
-                print(tempData)
+                //print(tempData)
                 self.apiImages = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! NSArray
-                print(self.apiImages)
+                //print(self.apiImages)
                 DispatchQueue.main.async {
                     completed()
                 }

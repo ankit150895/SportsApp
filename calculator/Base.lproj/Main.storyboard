@@ -446,6 +446,7 @@
                     <navigationItem key="navigationItem" id="d6p-1v-mhR"/>
                     <connections>
                         <outlet property="collectionviewInst" destination="hfu-Gr-oJg" id="ffv-wy-n8s"/>
+                        <outlet property="savebutton" destination="eoF-rh-E5L" id="kBX-gx-2aW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITt-pI-Vkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -920,10 +921,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reJ-zV-HMw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reJ-zV-HMw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="66.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qmv-zb-GpF">
@@ -986,6 +988,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myCollectionView" destination="qmv-zb-GpF" id="6YR-nZ-6Kb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7z-8z-VFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1686,6 +1691,6 @@
         <image name="specialbanner" width="1393" height="767"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V6p-Ef-8SI"/>
+        <segue reference="aHY-5g-wDk"/>
     </inferredMetricsTieBreakers>
 </document>
