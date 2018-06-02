@@ -10,6 +10,13 @@ DEPENDENCIES:
   - Segmentio
   - SideMenu
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - Segmentio
+    - SideMenu
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
@@ -18,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: de23163b5c4a4ec6fdcc54f88b425336c57a1e3e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

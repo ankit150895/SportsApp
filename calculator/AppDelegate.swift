@@ -10,11 +10,31 @@ import UIKit
 import CoreData
 import SideMenu
  var firstTimeLaunch = false
+var token = Int()
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let launchBefore =  UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchBefore {
+//            let defaults = UserDefaults.standard
+//            let defaultValue = ["MyKey" : "\(myIndex)"]
+//            defaults.register(defaults: defaultValue)
+            print("launched before with the value \(token)")
+            
+        }
+        else{
+            var token = 0
+            UserDefaults.standard.set(token, forKey: "mytoken")
+            firstTimeLaunch = true
+//            let defaults = UserDefaults.standard
+//            let defaultValue = ["MyKey" : "0"]
+//            defaults.register(defaults: defaultValue)
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            print("launched first time")
+        }
+        
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.barStyle = .black
         navigationBarAppearance.tintColor = UIColor.black
@@ -43,6 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        let defaults = UserDefaults.standard
+        defaults.set(String(myIndex), forKey: "MyKey")
         self.saveContext()
     }
 

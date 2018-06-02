@@ -12,32 +12,41 @@ import AVKit
 var lbl = ""
 var link = ""
 var youtubeVideoLink = ""
+var apiImages = NSArray()
+
 var fullImgBridge = 0
+
 class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let webView  = UIWebView()
     var datafetch = false
     @IBOutlet weak var dataCV: UICollectionView!
-    var apiImages = NSArray()
     
     var playerInfo = [["name" : "ABD" , "skills" : "Batsmen"]] as NSArray
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.apiImages.count
+        return apiImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dataCell", for: indexPath) as! DataCVCell
         if datafetch == true{
+            if isSloganSelected == true{
+                cell.btn.isHidden = true
+                cell.imageView.image = apiImages[indexPath.row] as! UIImage
+                return cell
+            }
+            else{
             if lbl == "Videos"{
-                let  url = URL(string: ((self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String))
+                let  url = URL(string: ((apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String))
                 //print("my url :\(url)")
                 cell.imageView?.kf.setImage(with: url!)
             }
             else {
                 cell.btn.isHidden = true
-                let  url = URL(string: ((self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String))
+                let  url = URL(string: ((apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "image") as! String))
                 //print("my url :\(url)")
                 cell.imageView?.kf.setImage(with: url!)
             }
+        }
         }
         return cell
     }
@@ -52,15 +61,22 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if lbl == "Videos"{
-            youtubeVideoLink  = (self.apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "url") as! String
+            youtubeVideoLink  = (apiImages.object(at: indexPath.item) as! NSDictionary).value(forKey: "url") as! String
             let vc = storyboard?.instantiateViewController(withIdentifier: "VideoPlayVC") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
         }
         else {
+            if isSloganSelected == true {
+                let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
+                fullImgBridge = indexPath.item
+                self.present(vc, animated: true, completion: nil)
+            }
+            else {
             let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
             fullImgBridge = indexPath.item
             vc.myPhotoLink = (apiImages.object(at: fullImgBridge) as! NSDictionary).value(forKey: "image") as! String
             self.present(vc, animated: true, completion: nil)
+        }
         }
     }
     
@@ -69,7 +85,7 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if let tempData = data {
                 //print(tempData)
-                self.apiImages = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! NSArray
+                apiImages = try! JSONSerialization.jsonObject(with: tempData, options: .mutableContainers) as! NSArray
                 //print(self.apiImages)
                 DispatchQueue.main.async {
                     completed()
@@ -83,11 +99,16 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if isSloganSelected == true {
+            self.datafetch = true
+            apiImages = [#imageLiteral(resourceName: "Slogan1"),#imageLiteral(resourceName: "Slogan2"),#imageLiteral(resourceName: "Slogan3"),#imageLiteral(resourceName: "Slogan4"),#imageLiteral(resourceName: "Slogan5")]
+        }
+        else{
         apiData(){
             self.datafetch = true
             self.dataCV.reloadData()
         }
-        
+        }
         headerLabel.text = lbl
         
         let a = UIImageView()

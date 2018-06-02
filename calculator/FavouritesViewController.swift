@@ -6,6 +6,7 @@ var comingfromFavourites = false
 class FavouritesViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(rows.count)
         return rows.count
     }
     
@@ -21,7 +22,6 @@ class FavouritesViewController: UIViewController,UICollectionViewDelegate,UIColl
             print("Error loading image : \(error)")
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavouriteCell", for: indexPath) as! FavouriteCollectionViewCell
-        let myURL = rows[indexPath.item].filepath!
         cell.favouritesImgView.image = UIImage(data: imageData )
         cell.favouritesImgView.backgroundColor = UIColor.purple
         return cell
@@ -49,9 +49,9 @@ class FavouritesViewController: UIViewController,UICollectionViewDelegate,UIColl
         self.navigationController?.navigationBar.addSubview(b)
         let appdel = UIApplication.shared.delegate as! AppDelegate
         let context = appdel.persistentContainer.viewContext
-        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MyDatabase")
         do{
             rows = try context.fetch(MyDatabase.fetchRequest())
+            print("rows in viewDidLoad : \(rows)")
             myCollectionView.reloadData()
         }
         catch{

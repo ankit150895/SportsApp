@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var isSloganSelected = false
 class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     
     var imagelabel = ["Fixtures", "Squad" , "Gallery", "Slogan"]
@@ -62,7 +62,11 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
             link = "http://mapi.trycatchtech.com/v1/virat_kohli/rcb_images_list?page=1"
             lbl = "RCB Gallery"
         } else{
-            print("Nothing")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController
+            isSloganSelected = true
+            lbl = "RCB Slogan"
+            self.present(vc, animated: false, completion: nil)
+            
         }
 
     }

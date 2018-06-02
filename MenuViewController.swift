@@ -56,7 +56,18 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             sidevc.show(vc, sender: nil)
         }
         else {
-            self.dismiss(animated: true, completion: nil)
+            let text = "http://www.google.com"
+            
+            // set up activity view controller
+            let textToShare = [ text ]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+            
+            // exclude some activity types from the list (optional)
+            activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+            
+            // present the view controller
+            self.present(activityViewController, animated: true, completion: nil)
         }
     }
     

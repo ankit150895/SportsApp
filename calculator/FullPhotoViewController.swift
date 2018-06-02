@@ -16,21 +16,27 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
     
     var myPhotoLink = ""
     var index = 0
+    
     @IBOutlet weak var collectionviewInst: UICollectionView!
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
     @IBAction func Xfunction(_ sender: Any) {
-        
         self.dismiss(animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mediaCell", for: indexPath) as! FullPhotoCollectionViewCell
+        if isSloganSelected == true{
+            print("Slogan")
+            cell.myFullImg.image = apiImages[fullImgBridge] as! UIImage
+        }
+        else {
         let url = URL(string : myPhotoLink)
         cell.myFullImg.kf.setImage(with: url!)
         cell.myFullImg.contentMode = .scaleAspectFit
+        }
         return cell
     }
     
@@ -42,15 +48,18 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
     @IBAction func saveButtonPressed(_ sender: Any) {
         let appDel = UIApplication.shared.delegate as! AppDelegate
         let context = appDel.persistentContainer.viewContext
+        var token = UserDefaults.standard.object(forKey: "mytoken")
+        print("current value of token : \(token)")
+        myIndex = token as! Int
         let userEntity = MyDatabase(context: context)
         let a = String(myPhotoLink.suffix(3))
         //Get the documents directory URL
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         //Choose a name for your image
         let fileName = "myPhotoLink_\(myIndex).jpeg"
-        var fileUrl = documentsDirectory.appendingPathComponent(fileName)
+        let fileUrl = documentsDirectory.appendingPathComponent(fileName)
         userEntity.filepath = String(describing: fileName)
-        print("\(userEntity.filepath)")
+        print("\(String(describing: userEntity.filepath))")
         appDel.saveContext()
         myIndex += 1
         if a == "png" {
@@ -90,6 +99,9 @@ class FullPhotoViewController: UIViewController,UICollectionViewDelegate,UIColle
         }else {
                 
         }
+        token = myIndex
+        UserDefaults.standard.set(token, forKey: "mytoken")
+        UserDefaults.standard.synchronize()
     }
     
     @IBOutlet weak var savebutton: UIButton!
