@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VKFloatImage" translatesAutoresizingMaskIntoConstraints="NO" id="DYi-W0-aL9">
+                                <rect key="frame" x="47" y="167" width="281.5" height="333.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Virat Kohli - The App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-cR-hEA">
+                                <rect key="frame" x="46.5" y="550" width="281.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DYi-W0-aL9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GeJ-n9-pys"/>
+                            <constraint firstItem="ytL-cR-hEA" firstAttribute="top" secondItem="DYi-W0-aL9" secondAttribute="bottom" constant="49.5" id="GqT-JI-9nk"/>
+                            <constraint firstItem="DYi-W0-aL9" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.75" id="IhW-PX-EKZ"/>
+                            <constraint firstItem="ytL-cR-hEA" firstAttribute="height" secondItem="DYi-W0-aL9" secondAttribute="height" multiplier="0.1" id="REc-ZT-26Y"/>
+                            <constraint firstItem="ytL-cR-hEA" firstAttribute="centerX" secondItem="DYi-W0-aL9" secondAttribute="centerX" id="RRb-eB-qXK"/>
+                            <constraint firstItem="DYi-W0-aL9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rRL-dN-GQH"/>
+                            <constraint firstItem="DYi-W0-aL9" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.5" id="s8K-s1-K6R"/>
+                            <constraint firstItem="ytL-cR-hEA" firstAttribute="width" secondItem="DYi-W0-aL9" secondAttribute="width" id="tvD-Ir-OIe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,4 +47,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="VKFloatImage" width="1024" height="1024"/>
+    </resources>
 </document>

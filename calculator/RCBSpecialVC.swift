@@ -48,6 +48,7 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         if indexPath.item == 0 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "FixturesViewController") as! UINavigationController
             self.present(vc, animated: false, completion: nil)
@@ -61,12 +62,11 @@ class RCBSpecialVC: UIViewController, UICollectionViewDataSource, UICollectionVi
             self.present(vc, animated: false, completion: nil)
             link = "http://mapi.trycatchtech.com/v1/virat_kohli/rcb_images_list?page=1"
             lbl = "RCB Gallery"
-        } else{
+        } else {
             let vc = storyboard?.instantiateViewController(withIdentifier: "DataCollectionView") as! UINavigationController
             isSloganSelected = true
             lbl = "RCB Slogan"
             self.present(vc, animated: false, completion: nil)
-            
         }
 
     }

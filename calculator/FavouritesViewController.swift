@@ -3,6 +3,7 @@ import UIKit
 import CoreData
 var imageData = Data()
 var comingfromFavourites = false
+var favouriteIndex = 0
 class FavouritesViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,6 +34,14 @@ class FavouritesViewController: UIViewController,UICollectionViewDelegate,UIColl
         return CGSize(width: (self.view.frame.width-30)/3, height: (self.view.frame.width-30)/3 )
     }
    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        comingfromFavourites = true
+        favouriteIndex = indexPath.item
+        let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
+        vc.tempImg = imageData
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

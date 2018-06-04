@@ -65,8 +65,7 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
             let vc = storyboard?.instantiateViewController(withIdentifier: "VideoPlayVC") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
         }
-        else {
-            if isSloganSelected == true {
+        else  if isSloganSelected == true {
                 let vc = storyboard?.instantiateViewController(withIdentifier: "FullPhotoViewController") as! FullPhotoViewController
                 fullImgBridge = indexPath.item
                 self.present(vc, animated: true, completion: nil)
@@ -76,7 +75,6 @@ class DataCollectionView: UIViewController, UICollectionViewDataSource, UICollec
             fullImgBridge = indexPath.item
             vc.myPhotoLink = (apiImages.object(at: fullImgBridge) as! NSDictionary).value(forKey: "image") as! String
             self.present(vc, animated: true, completion: nil)
-        }
         }
     }
     
